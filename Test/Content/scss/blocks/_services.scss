@@ -1,0 +1,67 @@
+﻿@import "../utils/media";
+
+.services {
+    background-image: $bg-gradient;
+    position: relative;
+
+    @include desktop {
+        height: 80vh;
+    }
+}
+
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+
+    .services {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.services__inner {
+    float: left;
+}
+
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+
+    .services__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: none;
+
+        @include desktop {
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+        }
+    }
+}
+
+
+
+.services__image {
+    margin-bottom: 15px;
+    width: 20%;
+}
+
+.services__item {
+    text-align: center;
+    color: $icons;
+    width: 90%;
+
+    &:not(:last-child) {
+        margin-bottom: 45px;
+    }
+
+    @include desktop {
+        width: 30%;
+    }
+}
+
+.services__title {
+    margin-bottom: 15px;
+}
+
+.services__description {
+    color: white;
+}

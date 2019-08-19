@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Scripts/dist/Home/react/main.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+        @RenderBody()
+
+
+    @RenderSection("scripts", required: false)
+
+    <script id="__bs_script__">
+    //<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+    <script src="~/Scripts/dist/Home/react/bundle.js"></script>
+
+</body>
+</html>

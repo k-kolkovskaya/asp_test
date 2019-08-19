@@ -1,0 +1,28 @@
+@import "../utils/media";
+
+.nav-menu__list {
+
+    @include desktop {
+        display: flex;
+        float: left;
+    }
+}
+
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+
+    .nav-menu__list {
+        @include desktop {
+            display: flex;
+            float: none;
+        }
+    }
+}
+
+.nav-menu__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 10px;
+
+    @include desktop {
+        margin-bottom: 0;
+    }
+}

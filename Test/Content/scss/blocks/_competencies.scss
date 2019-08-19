@@ -1,0 +1,54 @@
+@import "../utils/media";
+
+.competencies__inner {
+
+    float: left;
+    
+    @include desktop {
+        height: 700px;
+    }
+}
+
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+
+    .competencies__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: none;
+
+        @include desktop {
+            flex-wrap: wrap-reverse;
+            height: 700px;
+        }
+    }
+}
+
+.competencies__item {
+    width: 90%;
+
+    @include desktop {
+        width: 40%;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+}
+
+.competencies__image {
+    margin-bottom: 20px;
+    height: 80px;
+
+    img {
+        max-height: 65%;
+    }
+}
+
+.competencies__title {
+  margin-bottom: 15px;
+}
+
+.competencies__description {
+  color: $grey;
+}
