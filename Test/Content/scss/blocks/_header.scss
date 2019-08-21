@@ -43,13 +43,15 @@
 
     .header__main-inner,
     .footer__main-inner {
-        padding: 20px 0;
+        position: relative;
     }
 
 @supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
 
     .header__main-inner,
     .footer__main-inner {
+        position: static;
+        padding: 20px 0;
 
         @include desktop {
             display: flex;
@@ -71,5 +73,6 @@
 
     .footer__main-inner {
         justify-content: flex-end;
+        position: static;
     }
 }

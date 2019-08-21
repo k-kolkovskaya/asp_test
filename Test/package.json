@@ -25,8 +25,19 @@
     "webpack-notifier": "^1.8.0"
   },
   "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "browserslist": "^4.6.6",
+    "postcss-loader": "^3.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23"
+  ]
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Competency from "../components/Competency";
 import competencies from "../data/competencies";
 
+
 function Home() {
     return (
         <section className="competencies">

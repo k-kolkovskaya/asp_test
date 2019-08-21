@@ -2,12 +2,11 @@
 
 .competencies__inner {
 
-    float: left;
-    
     @include desktop {
         height: 700px;
     }
 }
+
 
 @supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
 
@@ -15,11 +14,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        float: none;
 
         @include desktop {
             flex-wrap: wrap-reverse;
-            height: 700px;
         }
     }
 }
@@ -29,10 +26,18 @@
 
     @include desktop {
         width: 40%;
+        float: left;
     }
 
     &:not(:last-child) {
         margin-bottom: 60px;
+    }
+}
+
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+
+    .competencies__item {
+        float: none;
     }
 }
 

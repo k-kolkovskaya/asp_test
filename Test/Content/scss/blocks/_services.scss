@@ -2,7 +2,6 @@
 
 .services {
     background-image: $bg-gradient;
-    position: relative;
 
     @include desktop {
         height: 80vh;
@@ -15,10 +14,6 @@
         display: flex;
         align-items: center;
     }
-}
-
-.services__inner {
-    float: left;
 }
 
 @supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
@@ -42,12 +37,17 @@
 .services__image {
     margin-bottom: 15px;
     width: 20%;
+
+    @include tablet {
+        width: 10%;
+    }
 }
 
 .services__item {
     text-align: center;
     color: $icons;
     width: 90%;
+    float: left;
 
     &:not(:last-child) {
         margin-bottom: 45px;
@@ -55,6 +55,24 @@
 
     @include desktop {
         width: 30%;
+        margin-bottom: 0;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+    .services__item {
+        @include desktop {
+            float: none;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
     }
 }
 
